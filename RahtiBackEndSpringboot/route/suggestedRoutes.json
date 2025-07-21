@@ -1,0 +1,11 @@
+{
+    "date": "2025-07-11",
+    "routesarray": {
+        "4": "X",
+        "1": "red",
+        "5": "Y"
+    },
+    "tripID": 42,
+    "sessionId": 1,
+    "time": "12:00"
+}
