@@ -1,6 +1,5 @@
 package com.example.route;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.time.LocalTime;
@@ -41,6 +40,7 @@ public class RouteController {
     @PostMapping("/route/request")
     public Map<String, Object> getRouteRequest(@RequestBody RequestDTO request) {
         Map<String, Object> recommended = new HashMap<>();
+        recommended.put("clientId", request.sessionID);
         recommended.put("sessionId", request.sessionID);
         recommended.put("tripID", request.tripID);
         recommended.put("time", request.time.toString());
