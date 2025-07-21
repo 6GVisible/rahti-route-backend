@@ -34,8 +34,8 @@ public class RouteController {
 
     //define methods
     @GetMapping("/route")
-    public String getRoute() {
-        return "Route information July 21";
+    public String getRoute(@RequestBody RequestDTO request) {
+        return "Route information"+ " timestamp: " + request.time.toString();
     }
 
     @PostMapping("/route/request")
@@ -66,8 +66,8 @@ public class RouteController {
 
 
     @GetMapping("/route/end")
-    public String endRoute() {
-        return "Confirm: Route ended";
+    public String endRoute(@RequestBody RequestDTO request) {
+        return "Confirm: Route ended" + " timestamp: " + request.time.toString();
     }
 
     @PostMapping("/preferences")
